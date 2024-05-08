@@ -1,0 +1,82 @@
+html, body {
+    height: 100%; /* Ensures the html and body take full viewport height */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    overflow: hidden; /* Prevents scrolling by hiding overflow */
+    background-color: #F0F0F0;
+  }
+  
+  #secondsContainer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centers children horizontally */
+    align-items: center; /* Centers children vertically */
+  }
+  
+  #sandBlock {
+    width: 100%;
+    position:absolute;
+    bottom: 0px;
+    display: flex;
+    height:35%;
+    justify-content: center; /* Centers the stones horizontally */
+    align-items: center; /* Optionally centers the stones vertically if needed */
+    background: #FFDEB8;
+    box-shadow: 0 -20px 20px 10px #FFDEB8;
+    z-index: 1;
+  }
+  
+  .stone {
+    display: flex;
+    justify-content: center; /* Center the number horizontally within the stone */
+    align-items: center; /* Center the number vertically within the stone */
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    color: #787878;
+    font-family:inter;
+    font-size: 60px;
+    font-weight: bold;
+    /*background: #DFC4A4;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    margin: 0 20px; /* Adds space between hour and minute stones */
+    z-index: 2;
+  }
+  
+  #hourStone {
+    margin-bottom: 80px;/* More distant from the bottom */
+    margin-right:40px;
+    justify-content: center;
+  }
+  
+  #hour{
+     font-size:150px;
+     width:50vh;
+     transform: rotate(-0.05turn);
+  }
+  
+  #minuteStone {
+    margin-bottom: 10px; /* Closer to the bottom compared to hour stone */
+    font-size:100px;
+    transform: rotate(0.01turn);
+    margin-left:40px;
+  }
+  
+  .second {
+    position: absolute;
+    animation: fall 60s linear forwards;
+    z-index: 0;
+    color:black;
+    font-family:inter;
+    font-size:18px;
+    text-align: center;
+  }
+  
+  @keyframes fall {
+    0% { top: 0; }
+    100% { top: 450px; }
+  }
+  
